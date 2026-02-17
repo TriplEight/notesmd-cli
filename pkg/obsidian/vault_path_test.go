@@ -132,7 +132,7 @@ func TestVaultPath(t *testing.T) {
 
 		configContent := `{
 			"vaults": {
-				"windows": {
+				"abc123": {
 					"path": "C:\\Users\\user\\Documents\\Obsidian Vault"
 				}
 			}
@@ -142,7 +142,7 @@ func TestVaultPath(t *testing.T) {
 			t.Fatalf("Failed to create obsidian.json file: %v", err)
 		}
 
-		vault := obsidian.Vault{Name: "windows"}
+		vault := obsidian.Vault{Name: "Obsidian Vault"}
 
 		// Act
 		vaultPath, err := vault.Path()
@@ -164,7 +164,7 @@ func TestVaultPath(t *testing.T) {
 
 		configContent := `{
 			"vaults": {
-				"secondary": {
+				"abc123": {
 					"path": "D:\\Data\\Vaults\\MyVault"
 				}
 			}
@@ -174,7 +174,7 @@ func TestVaultPath(t *testing.T) {
 			t.Fatalf("Failed to create obsidian.json file: %v", err)
 		}
 
-		vault := obsidian.Vault{Name: "secondary"}
+		vault := obsidian.Vault{Name: "MyVault"}
 
 		// Act
 		vaultPath, err := vault.Path()
@@ -196,7 +196,7 @@ func TestVaultPath(t *testing.T) {
 
 		configContent := `{
 			"vaults": {
-				"linux": {
+				"abc123": {
 					"path": "/home/user/Documents/Obsidian Vault"
 				}
 			}
@@ -206,7 +206,7 @@ func TestVaultPath(t *testing.T) {
 			t.Fatalf("Failed to create obsidian.json file: %v", err)
 		}
 
-		vault := obsidian.Vault{Name: "linux"}
+		vault := obsidian.Vault{Name: "Obsidian Vault"}
 
 		// Act
 		vaultPath, err := vault.Path()
