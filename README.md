@@ -39,6 +39,31 @@ brew tap yakitrak/yakitrak
 brew install yakitrak/yakitrak/notesmd-cli
 ```
 
+### Arch Linux (AUR)
+
+Install with your preferred AUR helper:
+
+```bash
+paru -S notesmd-cli-bin
+```
+
+```bash
+yay -S notesmd-cli-bin
+```
+
+### Build from Source
+
+Requires [Go](https://go.dev/dl/) 1.19 or later.
+
+```bash
+git clone https://github.com/yakitrak/notesmd-cli.git
+cd notesmd-cli
+go build -o notesmd-cli .
+sudo install -m 755 notesmd-cli /usr/local/bin/
+```
+
+---
+
 ## Migrating from Obsidian CLI
 
 **Upgrading from `obsidian-cli` v0.2.3 or earlier?** See the detailed [Migration Guide](MIGRATION.md) for step-by-step instructions on uninstalling the old version, installing Vault CLI, and migrating your configuration.
